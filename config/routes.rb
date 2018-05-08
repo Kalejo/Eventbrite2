@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, :path => '',
-               :path_names => {:sign_in => 'login', :sign_out => 'logout', :edit => 'profile'}
-  root 'home#index'
+               :path_names => {:sign_in => 'login', :sign_out => 'logout', :edit => 'profile'},
+               :controllers=>{:registration=>'registration'}
 
-resources :users, only: [:show]
+  	root 'home#index'
+	resources :users, only: [:show]
 
 
 end
