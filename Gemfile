@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-# authentification
-#gem 'devise'
-#gem 'pundit'
+
 ruby '2.4.1'
+
+# authentification
+gem 'devise'
+#gem 'pundit'
+
 
 gem 'rails'
 gem 'puma'
@@ -15,6 +18,8 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap-sass'
+gem 'devise-i18n'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug',  '9.0.6', platform: :mri
