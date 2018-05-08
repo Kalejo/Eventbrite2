@@ -7,7 +7,7 @@ ruby '2.4.1'
 gem 'devise'
 #gem 'pundit'
 
-
+gem "paperclip"
 gem 'rails'
 gem 'puma'
 gem 'sass-rails'
