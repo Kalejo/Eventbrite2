@@ -19,7 +19,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap-sass'
 gem 'devise-i18n'
 gem 'rails-i18n'
-gem 'bcrypt', '3.1.11'
+#gem 'bcrypt', '3.1.11'
+#gem 'install bundler'
 
 group :development, :test do
   gem 'sqlite3'
@@ -50,7 +51,7 @@ end
 
 group :production do
   gem 'pg', '0.20.0'
-  
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
