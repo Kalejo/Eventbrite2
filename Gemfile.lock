@@ -157,8 +157,6 @@ GEM
     pry-byebug (3.4.3)
       byebug (>= 9.0, < 9.1)
       pry (~> 0.10)
-    pry-rails (0.3.6)
-      pry (>= 0.10.4)
     public_suffix (3.0.2)
     puma (3.11.4)
     rack (2.0.5)
@@ -185,11 +183,6 @@ GEM
     rails-i18n (5.1.1)
       i18n (>= 0.7, < 2)
       railties (>= 5.0, < 6)
-    rails_12factor (0.0.3)
-      rails_serve_static_assets
-      rails_stdout_logging
-    rails_serve_static_assets (0.0.5)
-    rails_stdout_logging (0.0.5)
     railties (5.2.0)
       actionpack (= 5.2.0)
       activesupport (= 5.2.0)
@@ -276,6 +269,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (= 3.1.11)
   better_errors
   binding_of_caller
   bootsnap (>= 1.1.0)
@@ -295,11 +289,9 @@ DEPENDENCIES
   pg (= 0.20.0)
   poltergeist
   pry-byebug
-  pry-rails
   puma
   rails
   rails-i18n
-  rails_12factor
   rspec-rails
   sass-rails
   shoulda-matchers

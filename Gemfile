@@ -19,12 +19,13 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap-sass'
 gem 'devise-i18n'
 gem 'rails-i18n'
+gem 'bcrypt', '3.1.11'
 
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug',  '9.0.6', platform: :mri
   gem 'rspec-rails'
-  gem 'pry-rails'
+  #gem 'pry-rails'
   gem 'pry-byebug'
   gem 'database_cleaner'
   gem "factory_bot_rails"
@@ -49,8 +50,7 @@ end
 
 group :production do
   gem 'pg', '0.20.0'
-
-gem 'rails_12factor'
+  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
