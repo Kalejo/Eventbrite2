@@ -1,0 +1,25 @@
+<% if user_signed_in? %>
+<% provide(:title, 'Edit event') %>
+<h1 style="text-align:center; padding-top:100px">Edit event</h1>
+
+  <div class="col-sm-10 offset-sm-1 text-left">
+    <%= form_for @event do |f| %>
+      <%= f.label :description %>
+      <%= f.text_field :description, class: 'form-control' %>
+
+      <%= f.label :date %>
+      <%= f.datetime_field :date, class: 'form-control' %>
+
+      <%= f.label :place %>
+      <%= f.text_field :place, class: 'form-control' %>
+      
+      <%= f.label :price %>
+      <%= f.number_field :price, class: 'form-control', step: :any %></br>    
+    <div class="actions col-sm-10 offset-sm-1 text-center">
+      <%= f.submit "Update my event", class: "btn btn-primary" %>
+    </div>
+    <% end %>
+  </div>
+<%else%>
+<%flash[:error] = "Your must sign in or sign up first"%>
+<%end%>

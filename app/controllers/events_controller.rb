@@ -20,6 +20,7 @@ before_action :authenticate_user!, except: [:show]
     			redirect_to @event, notice:"Votre événement a été ajouté avec succès"
     		else
     			render :new
+    		end
     end
 
 	def show
@@ -33,6 +34,7 @@ before_action :authenticate_user!, except: [:show]
     		redirect_to @event, notice:"Modification enregistrée..."
     	else
     		render :edit
+    	end
 
     end
 
@@ -50,8 +52,7 @@ before_action :authenticate_user!, except: [:show]
 	end
 
 	def event_params
-		params.require(:event).permit(:description, :date, :place, :price, :active)
-
+		params.require(:event).permit(:description, :date, :place, :price)
 	end
 
 end

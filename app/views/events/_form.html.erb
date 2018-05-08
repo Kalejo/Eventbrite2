@@ -1,0 +1,81 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Participez à Events
+    </div>
+    <div class="panel-body">
+        <div class="container">
+
+            <%= form_for @event do |f| %>
+
+            <div class="row">
+                <div class="col-md-4 select">
+                    <div class="form-group">
+                        <label>Genre d'événements</label>
+                        <%= f.select :description, [["Evénement","lieu"], ["jour/nuit","jour/nuit"],
+                        id: "creator_id", 
+                        prompt: "A sélectionner...", class: "form-control" %>
+                    </div>
+                </div>
+
+                <div class="col-md-4 select">
+                    <div class="form-group">
+                        <label>Type de événement</label>
+                        <%= f.select :place, [["Concert","Concert"], ["Expo","Expo"],
+                        ["Salle de spectacle","Salle de spectacle"]],
+                        prompt: "A sélectionner...", class: "form-control" %>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label>Date de l'événement</label>
+                    <div class="input-group">
+                        <%= f.text_field :date, placeholder: "ex: 20h00", class: "form-control" %>
+                        <div class="input-group-addon">€</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="form-group">
+                <label>Lieu</label>
+                <%= f.text_field :place, placeholder: "Où est situé l'événement ?", class: "form-control" %>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label>Prix de l'événement</label>
+            <div class="input-group">
+                <%= f.text_field :price, placeholder: "ex: 45€", class: "form-control" %>
+                <div class="input-group-addon">€</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group">
+        <%= f.check_box :active %> Annonce active
+    </div>
+</div>
+
+<div class="actions">
+  <%= f.submit "Je valide mon événement", class: "btn btn-primary"%>
+</div>
+     <% end %>
+
+    </div>
+</div>
