@@ -11,7 +11,7 @@
                 <div class="col-md-4 select">
                     <div class="form-group">
                         <label>Genre d'événements</label>
-                        <%= f.select :description, [["Evénement","lieu"], ["jour/nuit","jour/nuit"],
+                        <%= f.select :description, ["Evénement","lieu"],
                         id: "creator_id", 
                         prompt: "A sélectionner...", class: "form-control" %>
                     </div>
@@ -36,7 +36,7 @@
                     <label>Date de l'événement</label>
                     <div class="input-group">
                         <%= f.text_field :date, placeholder: "ex: 20h00", class: "form-control" %>
-                        <div class="input-group-addon">€</div>
+                        <div class="input-group-addon">times</div>
                     </div>
                 </div>
             </div>
