@@ -6,6 +6,7 @@ ruby '2.4.1'
 # authentification
 gem 'devise'
 #gem 'pundit'
+gem 'font-awesome-sass'
 gem "paperclip"
 gem 'rails'
 gem 'puma'
